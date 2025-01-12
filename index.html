@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="images/ttgLogo.png" rel="icon">
+    <title>TechtoGreen</title>
+
+    <!-- Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+          rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/all.min.css">
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" type="text/css" href="vendor/owl.carousel/assets/owl.carousel.min.css">
+
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" type="text/css" href="vendor/magnific-popup/magnific-popup.min.css">
+
+    <!-- Youtube Video Background -->
+    <link rel="stylesheet" type="text/css" href="vendor/jquery.mb.YTPlayer/css/jquery.mb.YTPlayer.min.css">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link id="color-switcher" type="text/css" rel="stylesheet" href="#">
+
+</head>
+<body data-bs-spy="scroll" data-bs-target="#header-nav" data-bs-offset="0">
+
+<div class="cursor"></div>
+<div class="circle"></div>
+<div class="preloader">
+    <div class="lds-ellipsis">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+<div id="main-wrapper">
+    <header id="header" class="sticky-top-slide"></header>
+
+    <div id="content" role="main">
+        <section id="home">
+            <div class="hero-wrap">
+                <div class="hero-mask opacity-6 bg-dark"></div>
+                <div class="player" data-property="{videoURL:'https://youtu.be/XHWfAhrR9-o',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1}"></div>
+                <div class="hero-content section d-flex min-vh-100">
+                    <a href="#about" class="scroll-down-arrow text-white smooth-scroll"><span class="animated"><i class="fa fa-chevron-down"></i></span></a> </div>
+            </div>
+        </section>
+
+        <section id="about" class="section"></section>
+
+        <link rel="stylesheet" href="css/index.css">
+        <section id="services" class="section bg-light"></section>
+
+        <section id="portfolio" class="section bg-light"></section>
+
+        <section id="contact" class="section bg-light"></section>
+    </div>
+
+    <footer class="footer" id="footer"></footer>
+</div>
+
+<a id="back-to-top" class="rounded-circle" data-bs-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i
+        class="fa fa-chevron-up"></i></a>
+
+<div id="terms-policy" class="modal fade" role="dialog" aria-hidden="true"></div>
+<div id="disclaimer" class="modal fade" role="dialog" aria-hidden="true"></div>
+
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/jquery.easing/jquery.easing.min.js"></script>
+<script src="vendor/jquery.appear/jquery.appear.min.js"></script>
+<script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="vendor/jquery.countTo/jquery.countTo.min.js"></script>
+<script src="vendor/parallaxie/parallaxie.min.js"></script>
+<script src="vendor/typed/typed.min.js"></script>
+<script src="vendor/jquery.mb.YTPlayer/jquery.mb.YTPlayer.min.js"></script>
+<script src="vendor/owl.carousel/owl.carousel.min.js"></script>
+<script src="vendor/isotope/isotope.pkgd.min.js"></script>
+<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="js/switcher.min.js"></script>
+<script src="js/theme.js"></script>
+
+<script>
+    function loadComponent(id, file) {
+        fetch(file)
+            .then(response => {
+                if (!response.ok) throw new Error(`Failed to load ${file}`);
+                return response.text();
+            })
+            .then(content => {
+                document.getElementById(id).innerHTML = content;
+            })
+            .catch(error => console.error(error));
+    }
+
+    loadComponent('header', 'partials/header.html');
+    loadComponent('about', 'partials/about.html');
+    loadComponent('services', 'partials/services.html');
+    loadComponent('portfolio', 'partials/portfolio.html');
+    loadComponent('contact', 'partials/contact.html');
+    loadComponent('footer', 'partials/footer.html');
+    loadComponent('disclaimer', 'partials/disclaimer.html');
+    loadComponent('terms-policy', 'partials/terms-policy.html');
+</script>
+
+</body>
+</html>
