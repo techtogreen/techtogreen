@@ -57,36 +57,40 @@ body {
 /*-------- Cursor Animation --------*/
 body {
   margin: 0;
-  padding: 0;
-  background-color: #fff; /* You can customize this color */
-  /* overflow: hidden; */
-  cursor: none;
+  height: 100vh;
+  cursor: none; /* Hide default cursor */
+  background-color: #034748;
 }
 
-.cursor {
-  width: 8px;
-  height: 8px;
+/* Black dot for the cursor */
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
   background-color: black;
   border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999999;
+}
+
+/* Drone image that follows the cursor */
+.cursor-drone {
   position: fixed;
   top: 0;
   left: 0;
+  width: 80px;
+  height: 80px;
   pointer-events: none;
-  z-index: 1000;
+  z-index: 999999999;
   transform: translate(-50%, -50%);
 }
 
-.circle {
-  width: 40px;
-  height: 40px;
-  border: 2px solid black;
-  border-radius: 50%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 999;
-  transform: translate(-50%, -50%);
+/* Style for the drone image */
+.cursor-drone img {
+  width: 100%;
+  height: 100%;
 }
 
 /*-------- SlideShow --------*/
@@ -251,7 +255,11 @@ iframe {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #252b33;
+  color: black;
+}
+/* Targeting the .footer-heading class within the footer */
+.container.footer .footer-heading {
+  color: white !important;
 }
 
 /* =================================== */
@@ -550,10 +558,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .opacity-3 {
   opacity: 0.3;
-}
-
-.opacity-4 {
-  opacity: 0.4;
 }
 
 .opacity-5 {

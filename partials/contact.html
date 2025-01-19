@@ -7,45 +7,53 @@
                     class="heading-separator-line border-bottom border-3 border-primary d-block mx-auto"></span>
         </p>
     </div>
-    <!-- Heading end-->
-    <div class="row gy-5">
-        <div class="col-md-4 col-xl-3 order-1 order-md-0 text-center text-md-start">
+    <!-- Heading End -->
+
+    <!-- Content Section -->
+    <div class="d-flex flex-wrap gy-5">
+        <!-- Address Section -->
+        <div class="col-md-4 text-center text-md-start mb-4">
             <h2 class="mb-3 text-5 text-uppercase">Address</h2>
-            <p class="text-3 mb-4">3rd Floor, Flat-3A, 221/1, R.N.Thure Road, Bediapara, Kolkata, West Bengal - 700077</p>
-            <p class="text-3 mb-4"><span class="text-primary text-4 me-2"><i
-                    class="fas fa-envelope"></i></span>techtogreen02@gmail.com</p>
+            <p class="text-3 mb-4">3rd Floor, Flat-3A, 221/1, <br>R.N.Tagore Road, Bediapara, <br>Kolkata, West Bengal - 700077</p>
+            <p class="text-3 mb-4">
+                <span class="text-primary text-4 me-2"><i class="fas fa-envelope"></i></span>
+                techtogreen02@gmail.com
+            </p>
             <h2 class="mb-3 text-5 text-uppercase">Follow Us</h2>
             <ul class="social-icons justify-content-center justify-content-md-start">
-                <li class="social-icons-twitter"><a data-bs-toggle="tooltip"
-                                                    href="https://twitter.com/harnishdesign/"
-                                                    target="_blank" title="Twitter"><i
-                        class="fab fa-twitter"></i></a></li>
-                <li class="social-icons-facebook"><a data-bs-toggle="tooltip"
-                                                     href="http://www.facebook.com/harnishdesign/"
-                                                     target="_blank" title="Facebook"><i
-                        class="fab fa-facebook-f"></i></a></li>
-                <li class="social-icons-linkedin"><a data-bs-toggle="tooltip" href="http://www.linkedin.com/"
-                                                     target="_blank" title="LinkedIn"><i
-                        class="fab fa-linkedin"></i></a></li>
-                <li class="social-icons-github"><a data-bs-toggle="tooltip" href="http://www.github.com/"
-                                                   target="_blank" title="GitHub"><i
-                        class="fab fa-github"></i></a></li>
+                <li class="social-icons-linkedin">
+                    <a data-bs-toggle="tooltip" href="https://www.linkedin.com/company/techtogreen" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="social-icons-youtube">
+                    <a data-bs-toggle="tooltip" href="https://www.youtube.com/@techtogreen" target="_blank" title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </li>
+                <li class="social-icons-envelope">
+                    <a data-bs-toggle="tooltip" href="mailto:techtogreen02@gmail.com" target="_blank" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </li>
             </ul>
         </div>
-        <div class="col-md-8 col-xl-9 order-0 order-md-1">
+
+        <!-- Contact Form Section -->
+        <div class="col-md-8">
             <h2 class="mb-3 text-5 text-uppercase text-center text-md-start">Send us a note</h2>
             <form id="contact-form" action="php/mail.php" method="post">
                 <div class="row g-4">
                     <!-- Name Field -->
-                    <div class="col-xl-6">
+                    <div class="col-md-6">
                         <input name="name" type="text" class="form-control" required placeholder="Name *">
                     </div>
                     <!-- Email Field -->
-                    <div class="col-xl-6">
+                    <div class="col-md-6">
                         <input name="email" type="email" class="form-control" required placeholder="Email *">
                     </div>
                     <!-- Subject Dropdown -->
-                    <div class="col-xl-6">
+                    <div class="col-md-6">
                         <select name="subject" class="form-control" required>
                             <option value="" disabled selected>Subject *</option>
                             <option value="business_inspection">Business/Inspection Inquiry</option>
@@ -55,12 +63,11 @@
                         </select>
                     </div>
                     <!-- Mobile Number Field -->
-                    <div class="col-xl-6">
+                    <div class="col-md-6">
                         <input name="mobile" type="text" class="form-control" placeholder="Mobile Number">
                     </div>
-
                     <!-- Message Field -->
-                    <div class="col">
+                    <div class="col-12">
                         <textarea name="form-message" class="form-control" rows="5" required
                                   placeholder="Type your message... *"></textarea>
                     </div>
@@ -96,5 +103,20 @@
         -webkit-appearance: none;
         -moz-appearance: none;
         background: url('data:image/svg+xml;charset=US-ASCII,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2716%27 height=%2716%27 fill=%27%23343a40%27 class=%27bi bi-chevron-down%27 viewBox=%270 0 16 16%27%3e%3cpath fill-rule=%27evenodd%27 d=%27M1.5 6.5a.5.5 0 0 1 .8-.4l5.5 4.5 5.5-4.5a.5.5 0 0 1 .8.4v.5a.5.5 0 0 1-.8.4L8 11.9 1.8 7.4a.5.5 0 0 1-.8-.4v-.5z%27/%3e%3c/svg%3e') no-repeat right 0.75rem center/16px;
+    }
+
+    .social-icons li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .social-icons a {
+        color: black;
+        font-size: 20px;
+        transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+        color: #007bff;
     }
 </style>

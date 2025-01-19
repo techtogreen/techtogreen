@@ -33,9 +33,12 @@
 </head>
 <body data-bs-spy="scroll" data-bs-target="#header-nav" data-bs-offset="0">
 
-<div class="cursor"></div>
-<div class="circle"></div>
-<div class="preloader">
+    <div class="cursor-dot"></div>
+    <div class="cursor-drone">
+        <!-- Replace SVG with an image -->
+        <img src="./images/drone.png" alt="Drone Image">
+    </div>
+    <div class="preloader">
     <div class="lds-ellipsis">
         <div></div>
         <div></div>
@@ -49,22 +52,333 @@
 
     <div id="content" role="main">
         <section id="home">
-            <div class="hero-wrap">
-                <div class="hero-mask opacity-6 bg-dark"></div>
-                <div class="player" data-property="{videoURL:'https://youtu.be/XHWfAhrR9-o',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1}"></div>
-                <div class="hero-content section d-flex min-vh-100">
-                    <a href="#about" class="scroll-down-arrow text-white smooth-scroll"><span class="animated"><i class="fa fa-chevron-down"></i></span></a> </div>
+            <div class="hero-wrap" style="position: relative; overflow: hidden; height: 100vh;">
+
+                <!-- Video Background -->
+                <div class="player"
+                     data-property="{videoURL:'https://youtu.be/XHWfAhrR9-o', containment:'.hero-wrap', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1}"
+                     style="position: absolute; top: 0; left: 0; width: 50%; height: 50%; object-fit: cover; z-index: 999999999;">
+                </div>
+
+                <!-- Hero Content -->
+                <div class="hero-content section d-flex align-items-center justify-content-center min-vh-100" style="z-index: 2; padding-top: 70px;">
+                    <a href="#about" class="scroll-down-arrow text-white smooth-scroll" style="position: absolute; bottom: 30px;">
+                        <span class="animated"><i class="fa fa-chevron-down"></i></span>
+                    </a>
+                </div>
             </div>
         </section>
 
-        <section id="about" class="section"></section>
+        <section id="about" class="section">
+            <div class="container">
+                <!-- Heading -->
+                <div class="position-relative d-flex text-center mb-5">
+
+                    <p class="text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0">TechtoGreen's Action<span
+                            class="heading-separator-line border-bottom border-3 border-primary d-block mx-auto"></span>
+                    </p>
+                </div>
+                <!-- Heading end-->
+                <div class="container d-flex">
+                    <!-- Left Side: Slideshow -->
+                    <div class="slideshow-container" style="flex: 1; max-width: 50%;">
+                        <!-- Full-width images with left and right arrows -->
+                        <!-- Slide 1 -->
+
+                        <!-- Slide 2 -->
+                        <div class="mySlides ">
+                            <img src="./images/SlideShow/1.png" style="width:100%; aspect-ratio: 4 / 3;">
+                            <link href="images/ttgLogo.png" rel="icon">
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="mySlides ">
+                            <img src="./images/SlideShow/2.png" style="width:100%; aspect-ratio: 4 / 3;">
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="mySlides ">
+                            <img src="./images/SlideShow/3.png" style="width:100%; aspect-ratio: 4 / 3;">
+                        </div>
+                        <!-- Slide 5 -->
+                        <div class="mySlides ">
+                            <img src="./images/SlideShow/4.png" style="width:100%; aspect-ratio: 4 / 3;">
+                        </div>
+                        <!-- Slide 6 -->
+                        <div class="mySlides ">
+                            <img src="./images/SlideShow/5.png" style="width:100%; aspect-ratio: 4 / 3;">
+                        </div>
+                        <!-- Slide 7 -->
+                        <div class="mySlides ">
+                            <img src="./images/SlideShow/6.png" style="width:100%; aspect-ratio: 4 / 3;">
+                        </div>
+                        <!-- Slide 8 -->
+                        <div class="mySlides ">
+                            <img src="./images/SlideShow/7.png" style="width:100%; aspect-ratio: 4 / 3;">
+                        </div>
+                        <!-- Slide 9 -->
+                        <div class="mySlides ">
+                            <img src="./images/SlideShow/8.png" style="width:100%; aspect-ratio: 4 / 3;">
+                        </div>
+                        <div class="mySlides ">
+                            <img src="./images/SlideShow/9.png" style="width:100%; aspect-ratio: 4 / 3;">
+                        </div>
+
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+
+                    <!-- Right Side: Agridrone Writeup -->
+                    <div class="writeup" style="flex: 1; padding-left: 20px;text-align: justify">
+
+                        <p>
+                            TechToGreen Drone and Robotics Pvt. Ltd., founded in 2025 by the visionary faculty, scholars, and students of VIT-AP University, is leading the charge in delivering cutting-edge, autonomous products that address real-world challenges. Our cost-effective solutions harness the power of advanced drones and robotics, seamlessly integrating in-house patented technologies. By blending engineering, science, and technology, TechToGreen empowers industries with smart, efficient, and eco-friendly systems across sectors like precision agritech, surveillance, waste management, worker safety, and data collection. With a focus on practicality and sustainability, we are transforming the way industries solve complex problems.
+                        </p>
+                        <p>
+                            At TechToGreen, we combine research and technology to unlock innovative solutions that push the boundaries of what's possible. Rooted in deep engineering and scientific insights, every product is designed with precision and knowledge. Our unwavering commitment to growth and excellence drives us to not just meet client needs, but to revolutionize the way challenges are tackled, creating solutions that have a lasting and meaningful impact on both industries and society.
+                        </p>
+                        <!-- More Button -->
+                        <div style="text-align: center; margin-top: 20px;">
+                            <a href="more-info.html" class="more-btn" aria-label="Learn more about Agridrone">More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <style>
+                    <!-- Additional CSS -->
+
+                    #home {
+                        position: relative;
+                        height: calc(70vh - 50px); /* Adjust height to consider the navbar's height */
+                        margin-top: 25px; /* Push section down to make room for navbar */
+                    }
+
+                    .video-container {
+                        padding-top: 50px; /* Adjust this value based on navbar height */
+                        position: relative;
+                        width: 100%;
+                        height: calc(100vh - 50px); /* Subtract navbar height */
+                    }
+
+                    .player {
+                        padding-top: 50px; /* Adjust this value based on navbar height */
+                        position: relative;
+                        width: 100%;
+                        height: calc(100vh - 50px); /* Subtract navbar height */
+                        top: 0;
+                        left: 0;
+                        object-fit: contain; /* Maintain proper aspect ratio for the video */
+                    }
+
+                    .hero-content {
+                        text-align: center;
+                    }
+
+                    .scroll-down-arrow {
+                        font-size: 24px;
+                        cursor: pointer;
+                    }
+
+                    @media (max-width: 500px) {
+                        #home {
+                            height: calc(70vh - 50px); /* Adjust for smaller navbar on mobile */
+                        }
+
+                        .scroll-down-arrow {
+                            font-size: 20px;
+                        }
+                    }
+
+                    .more-btn {
+                        display: inline-block;
+                        padding: 12px 24px;
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: #fff;
+                        background-color: #28a745;
+                        text-decoration: none;
+                        border-radius: 5px;
+                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                        transition: background-color 0.3s, transform 0.2s;
+                    }
+
+                    .more-btn:hover {
+                        background-color: #218838;
+                        transform: scale(1.05);
+                    }
+
+                    @media (max-width: 768px) {
+                        .more-btn {
+                            font-size: 14px;
+                            padding: 10px 20px;
+                        }
+                    }
+                    * {box-sizing: border-box;}
+
+                    /* Slideshow container */
+                    .slideshow-container {
+                        position: relative;
+                        margin: auto;
+                    }
+
+                    /* Hide the images by default */
+                    .mySlides {
+                        display: none;
+                    }
+
+                    /* Next & previous buttons */
+                    .prev, .next {
+                        cursor: pointer;
+                        position: absolute;
+                        top: 50%;
+                        width: auto;
+                        margin-top: -22px;
+                        padding: 10px;
+                        color: white;
+                        font-weight: bold;
+                        font-size: 18px;
+                        transition: 0.6s ease;
+                        user-select: none;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        border-radius: 50%;
+                    }
+
+                    .prev {
+                        left: 10px;
+                    }
+
+                    .next {
+                        right: 10px;
+                    }
+
+                    .prev:hover, .next:hover {
+                        background-color: rgba(0, 0, 0, 0.8);
+                    }
+
+                    /* Fading animation */
+                    .fade {
+                        animation-name: fade;
+                        animation-duration: 1.5s;
+                    }
+
+                    @keyframes fade {
+                        from {opacity: .4;}
+                        to {opacity: 1;}
+                    }
+
+                    .writeup {
+                        font-family: Arial, sans-serif;
+                    }
+
+                    .writeup h2 {
+                        font-size: 24px;
+                        color: #333;
+                    }
+
+                    .writeup p {
+                        font-size: 16px;
+                        line-height: 1.6;
+                        color: #555;
+                    }
+                </style>
+                <script>
+                    let slideIndex = 1;
+
+                    // Show the initial slide
+                    showSlides(slideIndex);
+
+                    function plusSlides(n) {
+                        showSlides(slideIndex += n);
+                        localStorage.setItem('slide', slideIndex);
+                    }
+
+                    function showSlides(n) {
+                        let i;
+                        let slides = document.getElementsByClassName("mySlides");
+
+                        // Handle wrapping around slide indices
+                        if (n > slides.length) { slideIndex = 1; }
+                        if (n < 1) { slideIndex = slides.length; }
+
+                        // Hide all slides and show the current one
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        slides[slideIndex - 1].style.display = "block";
+                    }
+
+                    // Get the last stored slide index, default to 1 if not set
+                    slideIndex = parseInt(localStorage.getItem('slide')) || 1;
+
+                    // Set up the interval to auto-slide
+                    setInterval(() => {
+                        plusSlides(1); // Increment slides every 3 seconds
+                    }, 3000);
+                </script>
+            </div>
+            
+            
+                <br>
+            
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
+                    <span class="dot" onclick="currentSlide(8)"></span>
+                    <span class="dot" onclick="currentSlide(9)"></span>
+
+                </div>
+                <div class="brands-grid separator-border mt-5">
+                    <!-- Heading -->
+                    <div class="text-center mb-5">
+                        <p class="text-9 text-dark fw-600 lh-base mb-0">TechToGreen's Progress<span
+                                class="heading-separator-line border-bottom border-3 border-primary d-block mx-auto"></span>
+                        </p>
+                    </div>
+                    <!-- Statistics -->
+                    <div class="row">
+                        <div class="col-6 col-md-3">
+                            <div class="featured-box text-center">
+                                <h4 class="text-12 text-muted mb-0"><span class="counter" data-from="0"
+                                                                          data-to="7">7</span>+</h4>
+                                <p class="mb-0">Years Experience</p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="featured-box text-center">
+                                <h4 class="text-12 text-muted mb-0"><span class="counter" data-from="0"
+                                                                          data-to="10">10</span>+</h4>
+                                <p class="mb-0">Patents</p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="featured-box text-center">
+                                <h4 class="text-12 text-muted mb-0"><span class="counter" data-from="0"
+                                                                          data-to="15">15</span>+</h4>
+                                <p class="mb-0">Projects Done</p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="featured-box text-center">
+                                <h4 class="text-12 text-muted mb-0"><span class="counter" data-from="0"
+                                                                          data-to="20">20</span>+</h4>
+                                <p class="mb-0">Awards</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <link rel="stylesheet" href="css/index.css">
-        <section id="services" class="section bg-light"></section>
-
         <section id="portfolio" class="section bg-light"></section>
-
+        <section id="services" class="section bg-light"></section>
         <section id="contact" class="section bg-light"></section>
+
     </div>
 
     <footer class="footer" id="footer"></footer>
@@ -105,14 +419,250 @@
     }
 
     loadComponent('header', 'partials/header.html');
-    loadComponent('about', 'partials/about.html');
-    loadComponent('services', 'partials/services.html');
     loadComponent('portfolio', 'partials/portfolio.html');
+    loadComponent('services', 'partials/services.html');
     loadComponent('contact', 'partials/contact.html');
-    loadComponent('footer', 'partials/footer.html');
-    loadComponent('disclaimer', 'partials/disclaimer.html');
-    loadComponent('terms-policy', 'partials/terms-policy.html');
-</script>
 
+</script>
+    <style>
+        .footer {
+            background-color: #202020;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        .footer h5 {
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .footer address,
+        .footer ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .footer address a,
+        .footer ul li a {
+            color: #b3b3b3;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer address a:hover,
+        .footer ul li a:hover {
+            color: #ffffff;
+        }
+
+        .footer-row {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-col {
+            margin: 0 20px;
+        }
+
+        .footer-col ul {
+            margin-top: 10px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .social-icons a {
+            color: #b3b3b3;
+            margin-right: 10px;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+        }
+
+        .footer-terms {
+            display: inline;
+            margin-left: 10px;
+        }
+
+        .footer-terms li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .footer-terms li a {
+            color: #b3b3b3;
+            text-decoration: none;
+        }
+
+        .footer-terms li a:hover {
+            color: #ffffff;
+        }
+
+        .footer-row a {
+            color: white !important;
+        }
+
+        #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #ffffff;
+            color: #202020;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            z-index: 1000;
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        .btn-close {
+            background: #d9534f;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #popup-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        #popup-content {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    </style>
+<footer>
+    <div class="container footer" style="background: #034748">
+        <div class="footer-row">
+            <div class="footer-col" style="text-align: left">
+                <h5 class="footer-heading"><b>Address</b></h5>
+                <address style="text-align: start !important; color: white">
+                    3rd Floor, Flat-3A, 221/1, R.N.Tagore Road, <br>Bediapara, Kolkata, <br>West Bengal - 700077<br>
+                    <a href="mailto:techtogreen02@gmail.com" style="color: white;">techtogreen02@gmail.com</a>
+                </address>
+                <div class="social-icons" style="text-align: left;">
+                    <a href="https://www.linkedin.com/company/techtogreen" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@techtogreen" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="mailto:techtogreen02@gmail.com" target="_blank">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col" style="text-align: left">
+                <h5 class="footer-heading"><b>Main Links</b></h5>
+                <ul>
+                    <li><a href="home.html" style="color: white;">Home</a></li>
+                    <li><a href="about.html" style="color: white;">About Us</a></li>
+                    <li><a href="products.html" style="color: white;">Products & Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-col" style="text-align: left">
+                <h5 class="footer-heading"><b>Quick Links</b></h5>
+                <ul>
+                    <li><a href="patents.html" style="color: white;">Vision & Mission</a></li>
+                    <li><a href="awards.html" style="color: white;">Media</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+        <div class="footer-bottom" style="color: white">
+            <p>&copy; 2024 TechtoGreen. All Rights Reserved. |
+                <a href="#" onclick="showPopup('terms')">Terms of Use</a> |
+                <a href="#" onclick="showPopup('privacy')">Privacy Policy</a>
+            </p>
+        </div>
+
+        <div id="popup">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="popup-title">Disclaimer</h5>
+                    <button type="button" class="btn-close" onclick="closePopup()">&times;</button>
+                </div>
+                <div class="modal-body" id="popup-content">
+                    <!-- Content will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <div id="overlay" onclick="closePopup()"></div>
+
+        <script>
+            const termsContent = `<p>Tech to Green is a pioneering startup dedicated to bridging the gap between technology and
+                sustainability. With a focus on creativity and innovation, we aim to design and deliver cutting-edge
+                products that empower individuals and organizations to adopt eco-friendly practices without
+                compromising efficiency or performance. From energy-efficient solutions to smart systems that
+                promote a greener lifestyle, our mission is to revolutionize how technology can contribute to a
+                sustainable future.</p>`;
+            const privacyContent = `<p>At <strong>Tech to Green</strong>, we value your privacy. This policy explains how we collect, use,
+                    and protect your personal information. By using our website, you agree to this Privacy Policy.</p>
+                <h4>1. Information We Collect</h4>
+                <p>We may collect personal details like your name, email, and other information you provide, as well as
+                    website usage data such as IP address and cookies to enhance your experience.</p>
+                <h4>2. How We Use Your Information</h4>
+                <p>We use the information to improve our services, respond to inquiries, and send updates or promotional
+                    materials with your consent.</p>`;
+
+            function showPopup(type) {
+                document.getElementById('popup-content').innerHTML = type === 'terms' ? termsContent : privacyContent;
+                document.getElementById('popup-title').innerText = type === 'terms' ? 'Terms of Use' : 'Privacy Policy';
+                document.getElementById('popup').style.display = 'block';
+                document.getElementById('overlay').style.display = 'block';
+            }
+
+            function closePopup() {
+                document.getElementById('popup').style.display = 'none';
+                document.getElementById('overlay').style.display = 'none';
+            }
+        </script>
+    </div>
+</footer>
 </body>
 </html>
